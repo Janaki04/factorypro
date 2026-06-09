@@ -3,6 +3,7 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import bg from "../../assets/pricing.jpg";
 import PageBanner from "../../components/PageBanner"
+import BlogGrid from './BlogGrid';
 
 
 function Blog() {
@@ -14,6 +15,7 @@ function Blog() {
         activePage="Blog"
         bgImage={bg}
       />
+      <BlogGrid/>
     <Footer/>
      </>
   )

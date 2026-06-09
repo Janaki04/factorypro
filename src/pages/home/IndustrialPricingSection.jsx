@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { Check, Calendar, ShieldCheck, Clock } from 'lucide-react';
 
 export default function IndustrialPricingSection() {
-  // State to manage selected plan for interactive mobile views or custom selection clicks
-  const [selectedPlanId, setSelectedPlanId] = useState(2); // Default to the centered popular tier
+  const [selectedPlanId, setSelectedPlanId] = useState(2); 
 
   const plans = [
     {
@@ -16,7 +15,6 @@ export default function IndustrialPricingSection() {
         "Technical Support",
         "Monthly Progress Reports"
       ],
-      // Abstract decorative SVG paths to match the structural line art in the image
       bgDecoration: (
         <svg className="absolute top-0 right-0 w-32 h-32 text-orange-500/10 pointer-events-none" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1">
           <path d="M40,20 L80,35 L60,55 L20,40 Z" />
@@ -29,7 +27,7 @@ export default function IndustrialPricingSection() {
       id: 2,
       price: "39",
       name: "Advanced Plan",
-      isFeatured: true, // Uses the signature solid bright orange theme
+      isFeatured: true, 
       features: [
         "Standard Manufacturing Services",
         "Quality Control Checks",
@@ -68,18 +66,13 @@ export default function IndustrialPricingSection() {
   return (
     <section className="w-full bg-[#fcfcfc] text-[#222] font-sans antialiased px-6 py-20 lg:px-20 lg:py-24">
       <div className="max-w-7xl mx-auto">
-        
-        {/* ========================================================================= */}
-        {/* HEADER BLOCK                                                              */}
-        {/* ========================================================================= */}
+    
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end mb-16">
           <div className="lg:col-span-7">
-            {/* Tagline Indicator */}
             <div className="flex items-center gap-2 text-[#f07e13] uppercase tracking-[0.25em] text-[10px] font-black mb-3">
               <span className="text-start w-1.5 h-1.5 border border-[#f07e13] rounded-xs rotate-45 flex-shrink-0" />
               Pricing Plan
             </div>
-            {/* Main Header Title */}
             <h2 className="text-start text-3xl sm:text-4xl lg:text-[40px] font-light tracking-tight text-slate-900 leading-[1.25]">
               Transparent pricing for <br />
               <span className="text-start font-extrabold block mt-0.5">every solution</span>
@@ -93,12 +86,9 @@ export default function IndustrialPricingSection() {
           </div>
         </div>
 
-        {/* ========================================================================= */}
-        {/* PRICING MATRIX GRID                                                       */}
-        {/* ========================================================================= */}
+   
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch mb-16">
           {plans.map((plan) => {
-            // Evaluates true either dynamically by click/hover or by absolute featured property
             const isHighlighted = selectedPlanId === plan.id;
 
             return (
@@ -112,10 +102,8 @@ export default function IndustrialPricingSection() {
                     : 'bg-[#f4f4f4] text-slate-800 hover:bg-[#eaeaea]'
                 }`}
               >
-                {/* Decorative Pattern Layer Injection */}
                 {plan.bgDecoration}
 
-                {/* Card Head Details */}
                 <div>
                   <div className="flex items-baseline mb-2">
                     <span className={`text-2xl text-start font-bold ${isHighlighted ? 'text-white' : 'text-[#f07e13]'}`}>$</span>
@@ -127,7 +115,6 @@ export default function IndustrialPricingSection() {
                     {plan.name}
                   </h3>
 
-                  {/* Features Checklist Block */}
                   <ul className="space-y-4 mb-10">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-3">
@@ -147,7 +134,6 @@ export default function IndustrialPricingSection() {
                   </ul>
                 </div>
 
-                {/* Form Action Button wrapper */}
                 <div className="mt-auto">
                   <button className={`w-full py-3.5 px-6 rounded-xl text-xs font-bold tracking-wide transition-all duration-200 cursor-pointer ${
                     isHighlighted
@@ -162,9 +148,7 @@ export default function IndustrialPricingSection() {
           })}
         </div>
 
-        {/* ========================================================================= */}
-        {/* BOTTOM METADATA TRUST BADGES                                              */}
-        {/* ========================================================================= */}
+  
         <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 lg:gap-12 pt-4">
           <div className="flex items-center gap-2 text-gray-500 font-medium text-[11.5px]">
             <Calendar className="w-4 h-4 text-[#f07e13] stroke-[2]" />

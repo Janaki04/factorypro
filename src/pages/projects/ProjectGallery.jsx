@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 
 export default function ProjectGallery() {
-  // Category layout array exactly tracking the layout header index
   const categories = ['All', 'Automation', 'Development', 'Infrastructure', 'Manufacturing', 'Sustainability'];
 
-  // Current selected active category state
   const [activeCategory, setActiveCategory] = useState('All');
 
-  // Complete data matrix matching the project imagery and cards
   const projectData = [
     {
       id: 1,
@@ -47,7 +44,6 @@ export default function ProjectGallery() {
     }
   ];
 
-  // Logic to process subset matrices based on filters
   const filteredProjects = activeCategory === 'All'
     ? projectData
     : projectData.filter(project => project.category.toLowerCase() === activeCategory.toLowerCase());
@@ -56,9 +52,7 @@ export default function ProjectGallery() {
     <section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-white font-sans">
       <div className="max-w-7xl mx-auto">
         
-        {/* ========================================================================= */}
-        {/* FILTER NAVIGATION BUTTON BAR LINK MATRIX                                 */}
-        {/* ========================================================================= */}
+    
         <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-3 mb-16 text-xs sm:text-sm font-semibold tracking-wide text-gray-500">
           {categories.map((category, idx) => (
             <React.Fragment key={category}>
@@ -73,7 +67,6 @@ export default function ProjectGallery() {
                 {category === 'Sustainability' ? '• Sustainability' : category}
               </button>
               
-              {/* Render forward slashes between buttons without appending onto trailing element */}
               {idx < categories.length - 1 && (
                 <span className="text-gray-300 font-light select-none text-[11px]">/</span>
               )}
@@ -81,9 +74,7 @@ export default function ProjectGallery() {
           ))}
         </div>
 
-        {/* ========================================================================= */}
-        {/* INTERACTIVE CARDS FLEX LAYOUT GRID SYSTEM                                */}
-        {/* ========================================================================= */}
+   
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 px-14 gap-y-12 transition-all duration-300">
           {filteredProjects.map((project) => (
             <div 
@@ -91,15 +82,12 @@ export default function ProjectGallery() {
               className="group flex flex-col items-center text-center animate-fade-in"
             >
               
-              {/* Card Container Framework */}
               <div className="relative w-full aspect-[4/3] h-80 rounded-[32px] overflow-hidden bg-gray-100 shadow-sm mb-5">
                 
-                {/* Micro Category Floating Badge Pill */}
                 <span className="absolute top-5 left-5 z-20 px-3 py-1.5 bg-black/30 backdrop-blur-md text-white text-[11px] font-medium tracking-wider rounded-md pointer-events-none transition-opacity group-hover:bg-black/50">
                   {project.category}
                 </span>
 
-                {/* Primary Industrial Imagery */}
                 <img 
                   src={project.imageUrl} 
                   alt={project.title}
@@ -107,11 +95,9 @@ export default function ProjectGallery() {
                   loading="lazy"
                 />
 
-                {/* Slight Ambient Hover Mask Overlays */}
                 <div className="absolute inset-0 bg-black/5 opacity-100 group-hover:opacity-0 transition-opacity duration-300" />
               </div>
 
-              {/* Card Caption Title Block */}
               <h3 className="text-gray-800 text-[15px] sm:text-[16px] font-bold tracking-tight leading-snug px-4 group-hover:text-[#f07e13] transition-colors duration-150">
                 {project.title}
               </h3>
@@ -120,7 +106,6 @@ export default function ProjectGallery() {
           ))}
         </div>
 
-        {/* Dynamic Fallback Empty Prompt Screen if Filter Contains Zero Metrics */}
         {filteredProjects.length === 0 && (
           <div className="w-full text-center py-20 border border-dashed border-gray-200 rounded-3xl">
             <p className="text-gray-400 text-sm font-medium">No production implementations logged under this track yet.</p>

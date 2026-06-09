@@ -3,8 +3,10 @@ import { Menu, X, ArrowUpRight, ShieldCheck, Cpu, Settings } from 'lucide-react'
 import Header from '../../components/Header';
 import bg from "../../assets/Image.png"
 import AboutSection from './AboutSection';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+    const navigate=useNavigate()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
@@ -21,7 +23,6 @@ const Hero = () => {
     <>
     <div className="relative min-h-screen w-full text-white overflow-hidden font-sans">
       
-      {/* Background Image with Dark Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ 
@@ -31,12 +32,10 @@ const Hero = () => {
     
       </div>
 
-      {/* Content Wrapper */}
       <div className="relative z-10 flex flex-col min-h-screen justify-evenly max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
      <Header/>
 
-        {/* --- MAIN HERO BODY --- */}
         <main className="flex-1 flex flex-col pl-10 max-w-2xl py-12 lg:py-20">
           <h1 className="text-start text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight leading-tight sm:leading-none">
             Excellence innovating <br className="hidden sm:inline" />
@@ -51,9 +50,8 @@ const Hero = () => {
             through cutting-edge technology and innovative processes.
           </p>
 
-          {/* Action Button */}
           <div className="mt-8 flex">
-            <button className="group flex items-center bg-white text-black font-semibold rounded-md overflow-hidden transition-all duration-300 hover:bg-[#f07e13] hover:text-white shadow-lg shadow-black/30">
+            <button onClick={()=>{navigate("services")}} className="group flex items-center bg-white text-black font-semibold rounded-md overflow-hidden transition-all duration-300 hover:bg-[#f07e13] hover:text-white shadow-lg shadow-black/30">
               <span className="px-6 py-3.5 tracking-wide text-sm">
                 Explore More
               </span>
@@ -64,7 +62,6 @@ const Hero = () => {
           </div>
         </main>
 
-        {/* --- BOTTOM FEATURES BAR --- */}
         <footer style={{display:"flex",justifyContent:"space-evenly"}} className="w-full flex  py-8 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 gap-6 text-xs sm:text-sm font-medium tracking-wide text-gray-300">
           <div className="flex items-center space-x-3 group cursor-pointer">
             <div className="p-2 rounded-full bg-white/5 border border-white/10 text-[#f07e13] group-hover:bg-[#f07e13] group-hover:text-white transition-all duration-300">

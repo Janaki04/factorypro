@@ -6,10 +6,7 @@ export default function Footer() {
 
   return (
     <footer className="relative w-full bg-[#1e1e1e] text-white font-sans antialiased overflow-hidden pt-20 pb-8 px-10 lg:px-22">
-      
-      {/* ========================================================================= */}
-      {/* INDUSTRIAL SILHOUETTE BACKGROUND OVERLAY MASK                             */}
-      {/* ========================================================================= */}
+
       <div 
         className="absolute bottom-0 left-0 w-full h-full lg:w-[45%] opacity-15 pointer-events-none bg-cover bg-bottom bg-no-repeat bg-blend-luminosity mix-blend-overlay"
         style={{ 
@@ -19,10 +16,7 @@ export default function Footer() {
       <div className="absolute inset-0 bg-gradient-to-r from-[#1e1e1e]/60 via-[#1e1e1e] to-[#1e1e1e] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        
-        {/* ========================================================================= */}
-        {/* TOP BLOCK: CALL TO ACTION MATRIX                                          */}
-        {/* ========================================================================= */}
+  
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-10 pb-16 border-b border-white/10">
           <div className="max-w-xl">
             <h2 className="text-start text-3xl sm:text-4xl lg:text-[42px] font-light tracking-tight mb-4 leading-tight">
@@ -33,10 +27,9 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* ROTATING BADGE CTA BUTTON ASSEMBLY */}
           <div className="relative flex-shrink-0 self-start md:self-center mr-4 lg:mr-10">
             <a 
-              href="#contact" 
+              href="/contact" 
               className="group relative w-28 h-28 sm:w-32 sm:h-32 bg-[#f07e13] rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-105 shadow-xl shadow-orange-500/10 cursor-pointer"
             >
               <svg 
@@ -62,12 +55,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* ========================================================================= */}
-        {/* MAIN DIRECTORY SITEMAP STRUCTURE                                         */}
-        {/* ========================================================================= */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 gap-x-8 py-16">
           
-          {/* COLUMN 1: BRAND LOGO INFORMATION PANEL */}
           <div className="md:col-span-4 flex flex-col items-start">
             <div className="flex items-center gap-2.5 mb-5 group cursor-pointer">
               <div className="w-9 h-9 rounded-xl bg-[#f07e13] flex items-center justify-center text-white shadow-md shadow-orange-500/20">
@@ -82,7 +71,6 @@ export default function Footer() {
               We are committed to providing personalized industrial solutions.
             </p>
 
-            {/* RAW INLINE SVGS FOR SOCIAL BADGES (Fixes syntax error) */}
             <div className="flex items-center gap-3">
               <a href="#pinterest" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#f07e13] hover:border-[#f07e13] transition-all duration-200 text-xs font-bold" aria-label="Pinterest Profile">
                 P
@@ -102,10 +90,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* SITEMAP LINKS MATRIX WRAPPER */}
           <div className="md:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-8">
             
-            {/* COLUMN 2: QUICK LINKS */}
             <div className="flex flex-col">
               <h3 className="text-start text-sm font-bold tracking-tight mb-5 text-white/90">Quick Links</h3>
               <ul className="space-y-3.5">
@@ -119,7 +105,6 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* COLUMN 3: SECURITY LINK INDEX */}
             <div className="flex flex-col">
               <h3 className="text-start text-sm font-bold tracking-tight mb-5 text-white/90">Security</h3>
               <ul className="space-y-3.5">
@@ -133,7 +118,6 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* COLUMN 4: SYSTEM REGIONAL METADATA CONTACTS */}
             <div className="flex flex-col col-span-2 sm:col-span-1">
               <h3 className="text-start text-sm font-bold tracking-tight mb-5 text-white/90">Contact</h3>
               <ul className="space-y-4">
@@ -156,9 +140,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* ========================================================================= */}
-        {/* BOTTOM METADATA LEGAL SECTION                                             */}
-        {/* ========================================================================= */}
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-center text-center">
           <p className="text-start text-[11px] text-gray-500 tracking-wide font-light">
             Copyright © {currentYear} All Rights Reserved.

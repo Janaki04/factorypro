@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import image from "../../assets/our-process-image.jpg.png"
 
 export default function IndustrialProcessSection() {
-  // State to manage the active selected process step
   const [activeStep, setActiveStep] = useState(1);
 
   const processSteps = [
@@ -33,17 +32,13 @@ export default function IndustrialProcessSection() {
     <section className="w-full bg-[#fcfcfc] text-[#222] font-sans antialiased px-13 py-15 lg:px-20 lg:py-14">
       <div className="max-w-7xl mx-auto">
         
-        {/* ========================================================================= */}
-        {/* HEADER BLOCK (Matches exact layout structure)                            */}
-        {/* ========================================================================= */}
+   
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-2 items-end mb-16">
           <div className="lg:col-span-7">
-            {/* Tagline Badge */}
             <div className="flex items-center gap-2 text-[#f07e13] uppercase tracking-[0.25em] text-[10px] font-black mb-3">
               <span className="text-start w-1.5 h-1.5 border border-[#f07e13] rounded-xs rotate-45 flex-shrink-0" />
               Our Process
             </div>
-            {/* Main Section Header Title */}
             <h2 className="text-start text-3xl sm:text-4xl lg:text-[40px] font-light tracking-tight text-slate-900 leading-[1.25]">
               Streamlined processes <span className="font-medium text-slate-900">for</span> <br />
               <span className="font-extrabold block mt-0.5">optimal efficiency</span>
@@ -57,12 +52,8 @@ export default function IndustrialProcessSection() {
           </div>
         </div>
 
-        {/* ========================================================================= */}
-        {/* INTERACTIVE COMPOSITED SPLIT MATRIX                                       */}
-        {/* ========================================================================= */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* LEFT HALF: DYNAMIC IMAGE FRAME */}
           <div className="lg:col-span-6 w-full flex justify-center lg:justify-start">
             <div className="relative w-full max-w-[540px] aspect-square rounded-[40px] overflow-hidden shadow-md bg-slate-100">
               {processSteps.map((step) => (
@@ -77,12 +68,10 @@ export default function IndustrialProcessSection() {
                   }`}
                 />
               ))}
-              {/* Subtle Ambient Industrial Overlay Overlay */}
               <div className="absolute inset-0 bg-black/5 z-20 pointer-events-none" />
             </div>
           </div>
 
-          {/* RIGHT HALF: INTERACTIVE TIMELINE TABS BLOCK */}
           <div className="lg:col-span-6 flex flex-col gap-4 w-full max-w-[540px] mx-auto lg:mx-0">
             {processSteps.map((step) => {
               const isSelected = activeStep === step.id;
@@ -97,14 +86,12 @@ export default function IndustrialProcessSection() {
                       : 'bg-transparent text-slate-800 hover:bg-slate-50'
                   }`}
                 >
-                  {/* Step Serial Number Counter */}
                   <span className={`text-2xl sm:text-[32px] font-black text-start tracking-tight leading-none mt-0.5 transition-colors duration-200 ${
                     isSelected ? 'text-white' : 'text-[#f07e13]'
                   }`}>
                     {step.number}
                   </span>
 
-                  {/* Context Block */}
                   <div className="flex flex-col">
                     <h3 className={`text-sm sm:text-[15px] font-bold text-start tracking-tight mb-2 transition-colors duration-200 ${
                       isSelected ? 'text-white' : 'text-slate-900 group-hover:text-[#f07e13]'

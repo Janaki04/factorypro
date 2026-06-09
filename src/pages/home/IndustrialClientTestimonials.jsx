@@ -42,17 +42,13 @@ export default function IndustrialClientTestimonials() {
 
   return (
     <section className="w-full bg-[#F5F5F5] text-[#222] font-sans antialiased px-10 py-12 lg:px-20 lg:py-14 relative overflow-hidden">
-      {/* Background Matrix Dot Pattern Overlay */}
       <div className="absolute inset-0 opacity-[0.025] pointer-events-none bg-[radial-gradient(#f07e13_1px,transparent_1px)] [background-size:20px_20px]" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         
-        {/* ========================================================================= */}
-        {/* INTERACTIVE CAROUSEL FRAME MATRIX                                         */}
-        {/* ========================================================================= */}
+     
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-24">
           
-          {/* LEFT CONTAINER: RESPONSIVE RADIAL CORNER MAIN SPOTLIGHT IMAGE */}
           <div className="lg:col-span-5 w-full flex justify-center lg:justify-start">
             <div className="relative w-full max-w-[460px] aspect-square rounded-[44px] overflow-hidden shadow-2xl bg-slate-200">
               {testimonialData.map((item, idx) => (
@@ -70,22 +66,18 @@ export default function IndustrialClientTestimonials() {
             </div>
           </div>
 
-          {/* RIGHT CONTAINER: DYNAMIC TEXT DATA CONTENT OVERVIEW */}
           <div className="lg:col-span-7 flex flex-col justify-center h-full">
             
-            {/* Header Badge */}
             <div className="flex items-center gap-2 text-[#f07e13] uppercase tracking-[0.25em] text-[10px] font-black mb-4">
               <span className="text-start w-1.5 h-1.5 border border-[#f07e13] rounded-xs rotate-45 flex-shrink-0" />
               Our Client Say
             </div>
 
-            {/* Layout Main Headline */}
             <h2 className="text-start text-3xl sm:text-4xl lg:text-[40px] font-light tracking-tight text-slate-900 leading-[1.25] mb-8">
               What our satisfied clients <br />
               <span className="text-start font-extrabold block mt-0.5">are saying</span>
             </h2>
 
-            {/* Slider Quote Container Block */}
             <div className="relative min-h-[140px] sm:min-h-[100px] mb-8">
               {testimonialData.map((item, idx) => (
                 <div
@@ -103,10 +95,8 @@ export default function IndustrialClientTestimonials() {
               ))}
             </div>
 
-            {/* Navigators and Avatar Profile Ribbon Splitter */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 pt-6 border-t border-gray-100">
               
-              {/* Dynamic Profile Metadata */}
               <div className="flex items-center gap-3.5 min-h-[50px]">
                 <div className="relative w-11 h-11 rounded-xl overflow-hidden bg-slate-300 shadow-inner flex-shrink-0">
                   {testimonialData.map((item, idx) => (
@@ -130,7 +120,6 @@ export default function IndustrialClientTestimonials() {
                 </div>
               </div>
 
-              {/* Functional Interaction Controller Buttons */}
               <div className="flex items-center gap-3">
                 <button 
                   onClick={handlePrev}
@@ -153,18 +142,14 @@ export default function IndustrialClientTestimonials() {
           </div>
         </div>
 
-        {/* ========================================================================= */}
-        {/* RESPONSIVE BRAND LOGO ROW GRIDS                                           */}
-        {/* ========================================================================= */}
+
         <div className="pt-10 border-t border-gray-100 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center opacity-80">
           
-          {/* Logo Structure 1 */}
           <div className="flex items-center gap-2 group cursor-pointer select-none">
             <div className="w-5.5 h-5.5 rounded-full bg-[#f07e13] flex items-center justify-center text-white font-black text-[10px] shadow-2xs transition-transform group-hover:scale-105">⚡</div>
             <span className="text-start text-[14px] font-black text-slate-800 tracking-tighter">Logoipsum</span>
           </div>
 
-          {/* Logo Structure 2 */}
           <div className="flex items-center gap-2 group cursor-pointer select-none">
             <div className="w-5.5 h-5.5 rounded-md bg-[#f07e13] flex flex-col gap-0.5 justify-center items-center text-white p-0.5 shadow-2xs transition-transform group-hover:scale-105">
               <span className="text-start w-2.5 h-0.5 bg-white rounded-full" />
@@ -173,13 +158,11 @@ export default function IndustrialClientTestimonials() {
             <span className="text-start text-[14px] font-black text-slate-800 tracking-tighter">Logoipsum</span>
           </div>
 
-          {/* Logo Structure 3 */}
           <div className="flex items-center gap-2 group cursor-pointer select-none">
             <div className="w-5.5 h-5.5 rotate-45 border-2 border-[#f07e13] flex items-center justify-center text-[#f07e13] font-black text-[8px] shadow-2xs transition-transform group-hover:scale-105">◈</div>
             <span className="text-start text-[14px] font-black text-slate-800 tracking-tighter">Logoipsum</span>
           </div>
 
-          {/* Logo Structure 4 */}
           <div className="flex items-center gap-2 group cursor-pointer select-none">
             <div className="w-5.5 h-5.5 rounded-full border-4 border-[#f07e13] flex items-center justify-center shadow-2xs transition-transform group-hover:scale-105">
               <div className="w-1 h-1 rounded-full bg-[#f07e13]" />
@@ -187,7 +170,6 @@ export default function IndustrialClientTestimonials() {
             <span className="text-[14px] font-black text-slate-800 tracking-tighter">Logoipsum</span>
           </div>
 
-          {/* Logo Structure 5 */}
           <div className="flex items-center gap-2 group cursor-pointer select-none col-span-2 sm:col-span-1">
             <div className="w-5.5 h-5.5 bg-[#f07e13]/10 text-[#f07e13] rounded-md flex items-center justify-center font-bold text-xs shadow-2xs transition-transform group-hover:scale-105">❖</div>
             <span className="text-[14px] font-black text-slate-800 tracking-tighter">Logoipsum</span>

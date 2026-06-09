@@ -24,12 +24,10 @@ function Header() {
     <div className="w-full">
       <header className="w-full py-6 flex items-center justify-between border-b border-white/10 relative z-50">
         
-        {/* Router declarative Link wrapper */}
         <Link to="/" className="flex items-center">
           <img src={logo} alt="Logo" className="h-8 w-auto" />
         </Link>
 
-        {/* Desktop Navigation Link Array */}
         <nav className="hidden lg:flex items-center space-x-7 text-[13px] font-semibold tracking-wide">
           {navLinks.map((link) => (
             <div key={link.name} className="relative group">
@@ -54,7 +52,6 @@ function Header() {
                 </NavLink>
               )}
 
-              {/* Sub-dropdown links wrapper */}
               {link.hasDropdown && (
                 <div className={`absolute left-0 top-full mt-1 w-48 bg-[#222] border border-white/5 rounded-xl p-2 shadow-2xl transition-all duration-200 origin-top ${
                   openDropdown === link.name ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto'
@@ -74,7 +71,6 @@ function Header() {
           ))}
         </nav>
 
-        {/* Contact Asset */}
         <div className="hidden sm:flex items-center space-x-2.5 text-[13px] font-bold">
           <span className="text-[#f07e13] bg-white/10 w-8 h-8 rounded-full flex items-center justify-center">
             <Phone className="w-3.5 h-3.5 fill-current" />
@@ -82,13 +78,11 @@ function Header() {
           <a href="tel:+01123456789" className="text-white/90 hover:text-[#f07e13] transition-colors">+01 123456789</a>
         </div>
 
-        {/* Mobile Button Toggle */}
         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="lg:hidden p-2 text-gray-300 hover:text-white">
           {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </header>
 
-      {/* Mobile Menu Container Drawer */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 bg-[#161616] z-40 lg:hidden p-6 pt-24 flex flex-col justify-between">
           <nav className="flex flex-col space-y-4">

@@ -3,6 +3,7 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import bg from "../../assets/pricing.jpg";
 import PageBanner from "../../components/PageBanner"
+import ServicesDetailView from './ServicesDetailView';
 
 
 function Services() {
@@ -14,6 +15,7 @@ function Services() {
         activePage="Services"
         bgImage={bg}
       />
+      <ServicesDetailView/>
     <Footer/>
      </>
   )
